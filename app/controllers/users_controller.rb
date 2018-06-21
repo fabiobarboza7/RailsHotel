@@ -17,8 +17,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:id])
-    @user.save!
+    @user = User.create(user_params)
+    redirect_to pages_home_path
   end
 
   def update
@@ -28,6 +28,12 @@ class UsersController < ApplicationController
 
   def destroy
 
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:first_name)
   end
 
 end
