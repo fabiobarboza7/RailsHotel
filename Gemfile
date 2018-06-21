@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# bootstrap
+gem 'bootstrap', '~> 4.1.1'
+# simple_form_for
+gem 'simple_form'
 # acts_as_bookable
 gem 'acts_as_bookable'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
